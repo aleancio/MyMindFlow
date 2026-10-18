@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" type="php" href="AddUtente.php">
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="
+https://cdn.jsdelivr.net/npm/js-captcha@1.3.0/dist/js/index.min.js
+"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+        integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+        crossorigin="anonymous">
+
+
+    <style>
+@font-face {
+font-family: Nordique;
+src: url('../IMAGES/Nordique.otf');
+}
+.stereonic-font {
+font-family: Nordique, sans-serif;
+/* Aggiungi altri attributi di stile qui se necessario */
+}
+@font-face {
+font-family: Metropolis1920-Regular;
+src: url('../IMAGES/Metropolis1920-Regular.otf');
+}
+.stereonic-font {
+font-family: Metropolis1920-Regular, sans-serif;
+/* Aggiungi altri attributi di stile qui se necessario */
+}
+@font-face {
+font-family: OstrichSans-Heavy;
+src: url('../IMAGES/OstrichSans-Heavy.otf');
+}
+.stereonic-font {
+font-family: OstrichSans-Heavy, sans-serif;
+/* Aggiungi altri attributi di stile qui se necessario */
+}
+html {  
+    width:100%;
+    height: 50pt;
+}
+    body {
+    /*
+    margin: 0;
+    padding:0;
+    font-family: sans-serif;
+    //background: linear-gradient(#141e30, #243b55);
+	background : #a6a6a6;*/
+    height: 100vh;
+        margin:0;
+    	background-image: url("../IMAGES/sfondo1.jpg");
+        /*background-position: center center; /* Center the image */
+        width: 100%;
+        padding:0;
+        /*background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: 100%; /* Resize the background image to cover the entire container */
+        margin-top: 0;
+        display:flex;
+        align-items: center;
+
+    }
+.title {
+    margin-bottom: 3vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 8vh;
+    color: white;
+    font-family:  Metropolis1920-Regular;
+    margin-top:-2vh;
+    
+}
+
+.subtitle
+{
+        font-size: 5vh;
+        margin-top: 2.5vh;
+        color: white;
+        font-family:  OstrichSans-Heavy;
+        text-align:center;
+
+}
+
+
+
+
+
+    .login-box {
+    height: 93%;
+    width : 50%;
+    	position: absolute;
+        align-items: center;
+    	top:50%;
+        left: 50%;
+        padding: 3vw;
+        transform: translate(-50%, -50%);
+        background: #262626;
+        box-sizing: border-box;
+        box-shadow: 0 25px 35px rgba(0,0,0,.8);
+        border-radius: 5vh;
+    }
+    .sub-button{
+        font-family: OstrichSans-Heavy;
+        display: block;
+        width: 10vw;
+        height: 6vh;
+        background-color: #5A7FD7;
+        border-radius: 20px;
+        border: 0pt;
+        color: #fff;
+        font-size: 3.2vh;
+        margin: 0 auto;
+        align-items: center;
+        margin-bottom: 2vh;
+        margin-top: 2vh;   
+    }
+    .sub-button:hover{
+    	background-color: black;
+        color: white/*#141e30*/;
+        transition: 0.5s;
+        font-size: 1.3vw;
+    }
+     .login-box .user-box {
+    position: relative;
+    }
+
+    .login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1vw;
+    font-family: Nordique;
+    color: #fff;
+    margin-bottom: 1.5vh;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+
+    }
+    .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 3.3vh;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+        font-family: OstrichSans-Heavy;
+    }
+
+    .user-box input:focus ~ label,
+    .user-box input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: #d9d9d9;
+    font-size: 2vh;
+    font-family: OstrichSans-Heavy;
+    }
+
+    #genere{
+    width: 36vw;
+    margin-right: -2vw;
+    background-color: #262626;
+    height:4vh;
+    font-size: 1.5vW;
+    margin-top:0.5vh;
+    margin-right:1.5vh;
+    margin-bottom:1vh;
+    color: #fff;
+    border-bottom: 0.2vh solid #fff;
+    outline: none;
+        font-family: OstrichSans-Heavy;
+            margin-bottom: 1.5vh;
+    }
+    .tipo{
+    margin-left: -1vw;
+    margin-right: -2vw;
+    height:3vh;
+    font-size: 1.5vw;
+    color: #fff;
+    border: none;
+    background: transparent;
+        font-family: OstrichSans-Heavy;
+    }
+
+#gen{
+    height:3vh;
+    font-size: 1.5vw;
+	color: white;
+    border-bottom: 0.2vh solid;
+    border-color: #fff;
+    font-family: OstrichSans-Heavy;
+
+    
+}
+.underText{
+ 	color : white;
+     font-family: OstrichSans-Heavy;
+     font-size: 1.1vh;
+     text-align : center;
+     /*display:none;*/
+
+}
+#sfondo{
+    	width: 100%;
+        height: 100vh;
+        background-color: rgba(83, 83, 83, 0.46);
+        margin:0;
+        padding:0;
+        display:flex;
+        align-items: center;
+    }
+
+
+/* style.css */
+
+#top { 
+	color: green; 
+} 
+
+.group { 
+	width: auto; 
+	text-align: center; 
+} 
+
+.group label { 
+	display: block; 
+	padding: 20px 0; 
+} 
+
+.group input { 
+	border: none; 
+	outline: none; 
+	padding: 20px; 
+	width: calc(100% - 40px); 
+	border-radius: 10px; 
+	background-color: #eaeff2; 
+	color: #3ba62f; 
+	font-size: 2vh; 
+} 
+
+.group .power-container { 
+margin: 0 auto;
+	background-color: #2E424D; 
+	width: 90%; 
+	height: 0.7vh; 
+	border-radius: 5px; 
+} 
+
+.group .power-container #power-point { 
+	background-color: red;
+    
+	width: 100%; 
+	height: 100%; 
+	border-radius: 5px; 
+	transition: 0.5s; 
+}
+
+/* style del capthca */
+
+.inline{
+	display:inline-block;
+}
+
+.captcha_text{
+	width: 7vw;
+    height: 5vh;
+    
+	border: 0px;
+    
+
+}
+#submit{
+font-size:2.5vh;
+font-family:Nordique;
+    border-radius:15pt;
+}
+#rotels{
+color:white;
+width:5vw;
+}
+#image{
+    color:white;
+    background-color:#333333;
+    border: white 1pt solid;
+    padding:1.3vh;
+    border-radius: 20pt;
+    font-size:3vh;
+	font-family: italic;
+    text-decoration-line: line-through;
+
+}
+
+        .back{ 
+        	margin-top:1vh;
+        	color: white;
+            font-family: OstrichSans-Heavy, sans-serif;
+        	font-size: 15pt;
+            padding-bottom:0.01vh;
+            border: 0pt;
+            background-color: transparent;
+        }
+        .back:hover{  	
+            cursor: pointer;
+            border-bottom-width: 3px;
+            border-bottom-color: white;
+            border-bottom-style: solid;
+            transition: 0.5s;
+        }
+        
+        .tots{
+        text-align:center;
+        align-items:center;
+        }
+</style>
+
+<script>
+var nome
+var cognome
+var user
+var email
+var genere
+var password
+var confirm_password
+
+var underLabel
+
+
+
+window.onload = function(){
+	nome = window.document.getElementById('name')
+    cognome = window.document.getElementById('surname')
+    user = window.document.getElementById('username')
+    email = window.document.getElementById('email')
+    password = window.document.getElementById('password')
+    confirm_password = window.document.getElementById('confirm_password')
+    underLabel = window.document.getElementById('underLabel')
+    generate();
+
+let power = document.getElementById("power-point"); 
+console.log(password)
+password.oninput = function () { 
+    let point = 0; 
+    let value = password.value; 
+    console.log(value);
+    let widthPower =  
+        ["1%", "25%", "50%", "75%", "100%"]; 
+    let colorPower =  
+        ["#D73F40", "#DC6551", "#F2B84F", "#BDE952", "#3ba62f"]; 
+  
+    if (value.length >= 6) { 
+        let arrayTest =  [/[0-9]/, /[a-z]/, /[A-Z]/, /[^0-9a-zA-Z]/]; 
+        arrayTest.forEach((item) => { 
+            if (item.test(value)) { 
+                point += 1; 
+            } 
+        }); 
+    } 
+    console.log(power)
+    power.style.width = widthPower[point]; 
+    power.style.backgroundColor = colorPower[point]; 
+}
+
+
+
+
+
+
+}
+function sub()
+{	
+     if(printmsg()){
+            $.ajax({
+                	type : 'POST',
+                    url : 'AddUtente.php',
+                    data : {
+            			'name' : nome.value,
+                        'surname' : cognome.value,
+                        'username' : user.value,
+                        'email' : email.value,
+                        'password' : password.value,
+                        'confirm_password' : confirm_password.value
+                        },
+                    success : function(retPar){
+                    		//result = JSON.parse(retPar);
+							console.log(retPar);
+                            if(retPar.includes('pass_match'))
+                            {
+                             underLabel.innerHTML = ' ERROR : Passwords do not match'
+                            
+                            } else if (retPar.includes('user_error')){
+                            	
+                                underLabel.innerHTML = ' ERROR : Username already used'
+                            
+                            
+                            } else if (retPar.includes('already_exist')) {
+                            	underLabel.innerHTML = 'ERROR : Your account may already exist, please follow this <a href = "https://mindflow.altervista.org/recuperaPass/inserisciEmail.php">link</a> if you do not rember your password'
+                            
+                            
+                            } 
+                            
+                            else if (retPar.includes('email_already_in')) {
+                            	underLabel.innerHTML = 'ERROR : Your account may already exist, please follow this <a href = "https://mindflow.altervista.org/recuperaPass/inserisciEmail.php">link</a> if you do not rember your password'
+
+                            }
+                            
+                            else {
+
+                            		window.location.replace('immagineProfilo.html');
+   
+                            
+                            }
+                            
+      	         
+                    }
+                
+                })
+                } else {
+
+                                	underLabel.innerHTML = 'Captcha was not completed'              
+                 }
+               
+                
+
+
+}
+
+
+let captcha;
+function generate() {
+
+	// Clear old input
+	document.getElementById("submit").value = "";
+
+	// Access the element to store
+	// the generated captcha
+	captcha = document.getElementById("image");
+	let uniquechar = "";
+
+	const randomchar =
+"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+	// Generate captcha for length of
+	// 5 with random character
+	for (let i = 1; i < 5; i++) {
+		uniquechar += randomchar.charAt(
+			Math.random() * randomchar.length)
+	}
+
+	// Store generated input
+	captcha.innerHTML = uniquechar;
+}
+
+function printmsg() {
+	const usr_input = document.getElementById("submit").value;
+
+	// Check whether the input is equal
+	// to generated captcha or not
+	if (usr_input == captcha.innerHTML) {
+		//let s = document.getElementById("key").innerHTML = "Matched";
+		//generate();
+        return true;
+	}
+	else {
+		//let s = document.getElementById("key").innerHTML = "not Matched";
+		generate();
+        return false;
+	}
+}
+
+
+
+//let password = document.getElementById("password"); 
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+</head>
+<body>
+	<div id="sfondo">
+    <form action="AddUtente.php" method="post" class="login-box">
+    <div class="title"> MINDFLOW</div>
+        <div class="subtitle"> REGISTER</div>
+    <div class="user-box">
+        
+        <input type="text" autocomplete="off" autofill="off" id="name" name="name" required>
+        <label for="name" id="table">NAME:</label>
+        </div>
+        <div class="user-box">
+        
+        <input type="text" autocomplete="off" autofill="off" id="surname" name="surname" required>
+        <label for="surname">SURNAME:</label>
+         </div>
+        <div class="user-box">   
+        <input type="text" autocomplete="off" autofill="off" id="username" name="username" required>
+        <label for="username">USERNAME:</label>
+         </div>
+         <div class="user-box">   
+        <input type="email" autocomplete="off" autofill="off" id="email" name="email" required>
+        <label for="email">EMAIL:</label>
+         </div> 
+ <!--        <div>
+       <label for = "genere" id="gen">GENDER:</label>
+       <select id="genere" name = 'genere'>
+                <option value="M">male</option>
+                <option value="F">female</option>
+                <option value="A">other</option>
+       </select>
+     </div>-->
+     
+     <div class="user-box">
+
+        <input type="password" autocomplete="off" autofill="off" id="password" name="password" required>
+        <label for="password">PASSWORD:</label>
+       
+       
+      
+
+      </div>   
+	
+    <div class="user-box">
+        
+        <input type="password" autocomplete="off" autofill="off" id="confirm_password" name="confirm_password" required>
+        <label for="confirm_password">CONFIRM PASSWORD:</label>
+        <div class = 'group'>
+  
+          <div class="power-container" style="margin-top:1vh;"> 
+              <div id="power-point"></div> 
+          </div>   
+              	 
+        </div>
+  </div>  
+  
+  <div style="margin-top: 2vh;">
+  	<div id="Captchac" onload="generate()" style="text-align: center; margin-top:2vh; ">
+    <div id="user-input"class="inline" class="captcha_text">
+        <input type="text"
+               id="submit"
+               placeholder="Captcha code" autocomplete="off" autofill="off" />
+    </div>
+ 
+    <div class="inline" onclick="generate()">
+        <i class="fas fa-sync" id="rotels"></i>
+    </div>
+ 
+    <div id="image"
+         class="inline"
+         selectable="False">
+    </div>
+  </div>
+  	<div class="tots">
+    <input type="button" value="Register" class="sub-button" onclick = 'sub()'>
+    <div id = 'underLabel' class = 'underText'></div>
+    <input class="back" onclick = 'window.location.replace("../index.php")' type = 'button' value = 'Back'>
+ 	</div>
+</div>
+</form>
+</div>
+
+</body>
+</html>

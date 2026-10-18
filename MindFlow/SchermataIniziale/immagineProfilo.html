@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+
+
+
+
+@font-face {
+font-family: Nordique;
+src: url('../IMAGES/Nordique.otf');
+}
+.stereonic-font {
+font-family: Nordique, sans-serif;
+/* Aggiungi altri attributi di stile qui se necessario */
+}
+@font-face {
+font-family: Metropolis1920-Regular;
+src: url('../IMAGES/Metropolis1920-Regular.otf');
+}
+.stereonic-font {
+font-family: Metropolis1920-Regular, sans-serif;
+/* Aggiungi altri attributi di stile qui se necessario */
+}
+@font-face {
+font-family: OstrichSans-Heavy;
+src: url('../IMAGES/OstrichSans-Heavy.otf');
+}
+.stereonic-font {
+font-family: OstrichSans-Heavy, sans-serif;
+/* Aggiungi altri attributi di stile qui se necessario */
+}
+
+html {
+    height: 100%;
+    }
+    body {
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    /*background: linear-gradient(#141e30, #243b55);*/
+	background : #a6a6a6;
+    }
+
+    .login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50vw;
+    padding: 5vw;
+    transform: translate(-50%, -50%);
+    background: #262626;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+
+    }
+
+    .login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    }
+
+    .login-box .user-box {
+    position: relative;
+    
+    }
+
+    .login-box .user-box input {
+    
+    width: 100%;
+    padding: 10px 0;
+    font-size: 1.5vw;
+    color: white;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+
+    }
+    .login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 1.5vw;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+        font-family: OstrichSans-Heavy;
+    }
+
+    .sub-button{
+    margin-left: 30vh;
+        display: block;
+        width: 11vw;
+        height: 3vw;
+      	background-color: #262626;
+        border-radius: 20px;
+        border: solid #fff 2px;
+        color: #fff;
+        font-size: 1.5vw;
+        margin-bottom: 1vw;
+        margin-top: 1vw;
+        font-family: OstrichSans-Heavy;
+
+    }
+    .sub-button:hover{
+        background-color: #fff;
+        color: #141e30;
+        transition: 0.5s;
+
+    }
+
+    .sub-button-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+        
+
+
+    }
+.title {
+
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    font-size: 10vh;
+    color: white;
+    font-family:  Metropolis1920-Regular;
+    margin-top:-2vh;
+}
+
+.subtitle
+{
+color:white;
+    font-size: 4.5vh;
+    margin-top: 1.5vh;
+text-align :center;
+    font-family:  OstrichSans-Heavy;
+    margin-bottom: 2vh;
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+<form action="../ImageUploader/imageUploader.php" method="post" enctype="multipart/form-data">
+<div class="login-box">
+  <div class="title"> MINDFLOW</div>
+<br>
+ <div class="subtitle"> Select image to upload:</div>
+ <div class="user-box">
+  <input type="file" name="fileToUpload" id="fileToUpload" placeholder="aa">
+</div>
+  <input type="hidden" name = "uploadImage_fromSignUp">
+  <input type="submit" class="sub-button" value="Upload Image" name="submit">
+  </div>
+</form>
+
+</body>
+</html>
+

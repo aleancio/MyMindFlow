@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Project</title>
+    <link rel="stylesheet" href="../../IMAGES/Fonts.css">
+         <script src="https://code.jquery.com/jquery-3.6.4.js"></script>  
+    <style>
+       /*@font-face {
+          font-family: Nordique;
+          src: url('../../IMAGES/Nordique.otf');
+       }
+       .stereonic-font {
+         font-family: Nordique, sans-serif;
+         
+       }
+       @font-face {
+          font-family: OstrichSans-Heavy;
+          src: url('../../IMAGES/OstrichSans-Heavy.otf');
+       }
+       .stereonic-font {
+         font-family: OstrichSans-Heavy, sans-serif;
+         
+       }
+        @font-face {
+          font-family: Metropolis;
+          src: url('../../IMAGES/Metropolis1920-Regular.otf');
+       }
+       .stereonic-font {
+         font-family: Metropolis, sans-serif;
+         
+       }		
+		.title {
+          margin-bottom: 1vh;
+          margin-top: 3vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          font-size: 9vh;
+          color: white;
+          font-family:  Metropolis;
+   	    }
+
+  		.subtitle {
+          margin-top: 4vh;
+          font-size: 6vh;
+          margin-bottom: 2vh;
+          color: white;
+          font-family:  Metropolis;
+          text-align:center;
+		}
+         .login-box {
+          font-family: OstrichSans-Heavy;
+          font-size: 20pt;
+          background-color: #262626;
+          color: white;
+          width: 50vw;
+          //height: 90vh; Metropolis1920-Regular//
+          display: flex;
+          flex-direction: column;
+          border-radius: 30px;
+          border: none;
+          margin: 0 auto;
+          margin-top: 3vh;
+          align-items: center;
+          padding-left: 2vw;
+          padding-right: 2vw;
+          padding-bottom: 5vh;
+      }
+      	.sub-button{
+          margin-top: 3vh;
+          background-color: #5A7FD7;
+          font-family: OstrichSans-Heavy;
+          font-size: 20pt;
+          padding: 2vh;
+          border: none;
+          border-radius: 20pt;
+          color: white;
+      	}
+      	.login-box .user-box {
+      		position: relative;
+      	}
+
+      	.login-box .user-box input {
+          font-family: Nordique;
+          font-size: 16pt;
+          padding: 0.5vw;
+          padding-right: 0vw;
+          margin-bottom: 1.5vh;
+          width: 45vw;
+          border-radius: 10px;
+          height: 3vh;
+          max-width: 100%;
+          max-height: 25vh;
+          min-width: 100%;
+          min-height: 3vh;
+     	 }
+         
+      	#colore_progetto{
+          width: 50.5vw;
+          border-radius: 10px;
+          height: 6vh;
+          background-color: transparent;
+          padding: 0pt;
+          border: 0pt;
+          margin-left:0.3vw;
+		}
+    	#parole_chiave{
+    		margin-top: 1vh;
+    	}
+   		#color{
+			margin-left: 0.5vw;
+    	}*/
+        
+        
+        
+        
+        
+        body {
+          width:100vw;
+          height: 100vh;
+          margin:0;
+          padding:0;
+          background : #a6a6a6;
+          display: flex;
+          align-items: center;
+        }
+		form{
+            margin: 0;
+            background-color: #262626;
+            border-radius: 5vh;
+            border: none;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: OstrichSans-Heavy;
+            color: white;
+            font-size: 20pt;
+            padding: 3vh;
+            width: 50vw;            
+        }
+        .subtitle{
+        	font-family: Metropolis; font-size: 40pt;
+            margin-bottom: 4vh;
+        }
+        .user-box{
+        	display: flex;
+            flex-direction: column;
+            width: 100%;
+            margin-bottom: 2vh;
+        }
+        .genere{
+        	width: 100%;
+            margin-bottom: 2vh;
+		} 
+        input{
+        	border-radius: 10px;
+            height: 4vh;
+            font-family: Nordique;
+            font-size: 15pt;
+            padding: 0.5vh;
+        }
+        .sub-button{
+            margin-top: 3vh;
+            height: 6vh;
+            width: 13vw;
+            background-color: #5A7FD7;
+            font-family: OstrichSans-Heavy;
+            font-size: 20pt;
+            padding: 1vh;
+            border: none;
+            border-radius: 20pt;
+            color: white;
+      	}
+        .back{
+        	font-size: 15pt;
+            margin-top: 2vh;
+            padding-bottom:0.01vh;
+            border-bottom-width: 3px;
+            border-bottom-color: rgba(0, 0, 0, 0);
+            border-bottom-style: solid;
+        }
+        .back:hover{  	
+            cursor: pointer;
+            border-bottom-width: 3px;
+            border-bottom-color: white;
+            border-bottom-style: solid;
+            transition: 0.5s;
+        }
+        .sub-button:hover{
+        	background-color: black;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+      	.color{
+            align-items: center;
+            width: 35px;
+            height: 35px;
+            border-radius: 22px;
+            border: solid;
+            border-color: rgb(84, 84, 84);
+            border-width: 1px;
+         }
+         .color:hover{cursor: pointer;}
+          	#rosso {background: #f77070;}
+            #blu {background: #424fe4;}
+            #verde {background: #69c87e;}
+            #giallo {background: #eee97e;}
+            #arancione {background: #fa9f71;}
+            #viola {background: #917cfa;}
+            #marrone {background: #694c4c;}
+            #azzurro {background: #69a8dc;}
+
+
+    </style>
+    <script>
+    
+    var colore_progetto
+    	window.onload = function(){
+                	projName = document.getElementById('projectName');
+                    data_scadenza = document.getElementById('data_scadenza');
+        			parola_chiave_1 = document.getElementById('parole_chiave_1');                                
+        			parola_chiave_2 = document.getElementById('parole_chiave_2');
+                    parola_chiave_3 = document.getElementById('parole_chiave_3');
+        }
+    
+    
+    	function colore (color, id){
+        	document.getElementById('marrone').style.width="35px";
+        	document.getElementById('marrone').style.width="35px";
+            document.getElementById('arancione').style.width="35px";
+            document.getElementById('giallo').style.width="35px";
+            document.getElementById('verde').style.width="35px";
+            document.getElementById('blu').style.width="35px";
+            document.getElementById('azzurro').style.width="35px";
+            document.getElementById('viola').style.width="35px";
+            document.getElementById('marrone').style.height="35px";
+            document.getElementById('rosso').style.height="35px";
+            document.getElementById('arancione').style.height="35px";
+            document.getElementById('giallo').style.height="35px";
+            document.getElementById('verde').style.height="35px";
+            document.getElementById('blu').style.height="35px";
+            document.getElementById('azzurro').style.height="35px";
+            document.getElementById('viola').style.height="35px";
+        	document.getElementById(id).style.width="43px";
+            document.getElementById(id).style.height="43px";
+			/*<?php echo $_POST['colore']?>*/
+            colore_progetto = color;
+        }
+        
+        function creaProgetto()
+        {
+        	   $.ajax({
+                    type : 'POST',
+                    url : 'CreateProject_handler.php',
+                    data : {
+                    	crea_progetto : 'aaa',
+                        projectName : projName.value,
+                        data_scadenza : data_scadenza.value,
+                        k0 : parola_chiave_1.value,
+                        k1 : parola_chiave_2.value,
+                        k2 : parola_chiave_3.value,
+                        colore_progetto : colore_progetto
+                    },
+                    success : function(retPar){
+                    		//result = JSON.parse(retPar);
+                            
+                             console.log(retPar)
+								if(retPar.includes('project_created')){
+                                	window.location.replace("../ProjectsScreens/indexProject.php");
+                                }
+                                else {
+                                	
+                                	document.getElementById('errorBox').innerHTML ="Error: "+ retPar;
+                                }
+    
+                    }
+                })   
+        
+        
+        }
+        
+        
+    </script>
+
+</head>
+<body>
+
+    <form action="CreateProject_handler.php" method="post" class="login-box">
+        <div class="subtitle">Create a New Project</div>
+        <div class="user-box">
+            <label for="projectName">Project Name:</label>
+            <input autocomplete="off" autofill="off" type="text" id="projectName" name="projectName" required>      
+        </div>
+        <div class="user-box">
+            <label for="data_scadenza">Expiration date:</label>
+            <input autocomplete="off" autofill="off" placeholder="Date" type="date" id="data_scadenza" name="data_scadenza" required>
+		</div>
+        <div class="user-box">    
+            <label for="parole_chiave">Write 3 keywords:</label>
+            <input autocomplete="off" autofill="off" type="text" id="parole_chiave_1" name="k0" required>
+            <input autocomplete="off" autofill="off" type="text" id="parole_chiave_2" name="k1" required>
+            <input autocomplete="off" autofill="off" type="text" id="parole_chiave_3" name="k2" required>
+		</div>
+        <div class="genere">     
+            <label for="colore_progetto">Project color:</label>
+            <div style="display:flex; flex-direction: row; justify-content: space-around; align-items: center; background-color: white; border-radius: 30px; border: none; padding: 1vh; height: 6vh; max-width: 100%;">
+                <div id="marrone" class="color" onclick="colore('#694c4c', 'marrone')"></div>
+                <div id="rosso" class="color" onclick="colore('#f77070', 'rosso')"></div>
+                <div id="arancione" class="color" onclick="colore('#fa9f71', 'arancione')"></div>
+                <div id="giallo" class="color" onclick="colore('#eee97e', 'giallo')"></div>       
+                <div id="verde" class="color" onclick="colore('#69c87e', 'verde')"></div>
+                <div id="azzurro" class="color" onclick="colore('#69a8dc', 'azzurro')"></div>
+                <div id="viola" class="color" onclick="colore('#917cfa', 'viola')"></div>
+                <div id="blu" class="color" onclick="colore('#424fe4', 'blu')"></div>
+            </div>
+        </div>
+        <input type="button" class="sub-button" value = 'Create Project' onclick = 'creaProgetto()'>
+        <div class="back" onclick = 'window.location.replace("../../Locale/IndexProfileScreen/IndexProfile.php")'>Back</div>
+    	<div id = 'errorBox'></div>
+    </form>
+
+</body>
+</html>
